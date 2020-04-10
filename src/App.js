@@ -1,22 +1,12 @@
 import React from 'react';
+import Intro from './components/Intro';
 // import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h2> PRINTED ONESIE </h2>
-      <div className="wrap">
-        <div className="screenprint">
-          <div className="teeGroup">
-            <div className="tBefore">
-            <p>Design from the De Young Museum. <br />
-            Color Separations by Oxleberry.</p>
-            </div>
-            <div className="tAfter"><div className="t0"></div></div>
-          </div>
-        </div>
-      </div>
+      <Intro />
 
       <h2> SCREENPRINT BREAKDOWN</h2>
       <div className="wrap">
