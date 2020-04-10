@@ -1,38 +1,472 @@
-.App {
+body{
+  background: #ddd7d2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: 'Futura', sans-serif; 
+  font-size: 4.5rem;
+  margin-bottom: 25px;   
+  color: #70665f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ox-shadow{
+  -webkit-box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*CHANGE BACKGROUND TO SHIRT COLORS*/
+.wrap {
+  margin: 0px auto;
+  padding: 16px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 50px;
+  background: black;
+  -webkit-box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
+}
+
+/*MAIN SECTIONS*/
+.screenprint .inkGroup, 
+.screenprint .printGroup, 
+.screenprint .bitmapGroup, 
+.screenprint .artGroup, 
+.screenprint .teeGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.teeGroup {
+  border: 2px solid #474747;
+  background-color: white;
+}
+
+.inkGroup {
+/*    border: 2px solid #474747;*/
+  border-bottom: none;
+}
+
+.printGroup {
+  border: 2px solid #474747;  
+}
+
+.bitmapGroup { 
+  border: 2px solid #474747;
+}
+
+.artGroup {
+  border: 2px solid #474747;
+  background-color: #232323;
+}
+
+/*TEE SAMPLE & ACHKNOWLEGEMENTS*/
+.tBefore, .tAfter {
+  position: relative;
+  height: 200px;
+  width: 50%;
+  margin: 5px;
+  padding: 5px; 
+}
+
+.tBefore { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tBefore p {
+  margin: auto;
+  color: #b7b5b2;
+  font-family: Futura;
+  font-size: 1.8rem;
+}
+
+.t0 {
+  height: 100%;
+  width: 100%;
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/tee.jpg) center no-repeat; 
+  background-size: 200px;
+}
+
+/* INK BUTTONS */
+button {
+  border-style: none;
+  border-radius: 6px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ink:hover {
+  opacity: 0.6;
+}
+
+button.ink.active {
+  opacity: 0.6;
+  transform: translateY(2px);   
+}
+
+.reset {
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*INK COLORS - CHANGE THESE PER DESIGN*/
+.i1, .ib1 {
+  background: rgba(255, 255, 255, 0.7);  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.i2, .ib2 {  
+  background: rgba(103, 85, 69, 1);
+}
+
+.i3, .ib3 {
+  background: rgba(201, 178, 128, 1);
+}
+
+.i4, .ib4 {
+  background: rgba(156, 60, 37, 1);
+}
+
+.i5, .ib5 {
+  background: rgba(255, 255, 255, 1);
+}
+
+.ink {
+  height: 40px;
+  display: inline-block;
+  position: relative;
+} 
+
+/* HIGH RES PRINT ART */
+/*ALL*/
+.pAll, .aAll {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
+  opacity: 1;
+}
+
+/*UB*/
+.p1, .a1 {   
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png); 
+  opacity: 0.7;
+}
+
+.p2, .a2 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png); 
+  opacity: 1; 
+}
+
+.p3, .a3 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png);  
+  opacity: 1;
+}
+
+.p4, .a4 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png);  
+  opacity: 1;
+}
+
+.p5, .a5 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png); 
+  opacity: 1;
+}
+
+.pAll, .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12{
+  background-repeat: no-repeat;
+  background-position: 15%;
+  /*ADJUSTS THE PLACEMENT*/
+}
+
+.pBefore, .pAfter {
+  position: relative;
+  width: 50%;
+  margin: 5px;
+  padding: 5px; 
+}
+
+.print {
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/*BITMAP IMAGES*/
+/*ALL*/
+.bAll {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bitAll.png); 
+  opacity: 1;
+}
+
+.b1 {   
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit1.png); 
+  opacity: 0.6;
+}
+
+.b2 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit2.png);
+  opacity: 1; 
+}
+
+.b3 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit3.png); 
+  opacity: 1;
+}
+
+.b4 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit4.png); 
+  opacity: 1;
+}
+
+.b5 {
+  background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit5.png); 
+  opacity: 1;
+}
+
+.bAll, .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12{
+  background-size: 216%;
+  background-repeat: no-repeat;
+  background-position: 72% 44%;
+  /*ADJUSTS THE PLACEMENT*/
+}
+
+/*BITMAP*/
+.bBefore, .bAfter {
+  position: relative;
+  width: 50%;
+  margin: 5px;
+  padding: 5px; 
+/*    background-color: #f1f1f1;*/
+}
+
+.bBefore{
+  z-index: 8;
+}
+
+.bitmap {
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/*OVERVIEW*/
+.aBefore, .aAfter {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  margin: 3px;
+  background-color: black;
+}
+
+.inkAll{
+  height: 25px;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.all{
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 180px;
+}
+
+.aAll, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12{
+  background-repeat: no-repeat;
+  background-size: 7rem;
+  background-position: 50% 50%;
+  /*ADJUSTS THE PLACEMENT*/
+}
+
+/*MEDIA QUERIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*LARGE SIZE BELOW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media (min-width: 881px) {
+
+  /*INK*/
+  button {
+      width: 8%;   /*Divide the # of Ink Colors and adjust accoringly*/
   }
-  to {
-    transform: rotate(360deg);
+
+  .reset {
+    font-size: 1.4rem; 
+  }    
+
+  .inkText {
+      color: black;
+      font-weight: bold;
+      font-size: 1.4rem;   
+      font-family: sans-serif;  
   }
+
+  /*PRINT*/
+  .pBefore, .pAfter {
+      height: 400px;
+  }
+
+  .print {
+      background-size: 350px;
+  }
+  
+  /*BITMAP*/
+  .bitmapGroup {
+      height: 500px;
+  }
+}
+/*LARGE SIZE ABOVE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+/*MEDIUM SIZE BELOW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (max-width: 880px) and (min-width: 401px) {
+
+  /*INK*/
+  button {
+      width: 14%;   /*Divide the # of Ink Colors and adjust accoringly*/
+  }
+
+  .reset {
+      font-size: 1.4rem; 
+  }   
+
+  .inkText {
+      font-size: 0rem;   
+  }
+
+  /*PRINT*/
+  .pBefore, .pAfter {
+      height: 240px;
+  }
+
+  .print {
+      background-size: 280px;
+  }
+
+  /*BITMAP*/
+  .bitmapGroup {
+      height: 280px;
+  }
+}
+/*MEDIUM SIZE ABOVE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
+/*SMALLEST SIZE BELOW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media (max-width: 400px){
+
+  /*INK*/
+  button {
+      width: 15%;   /*Divide the # of Ink Colors and adjust accoringly*/
+  }
+
+  .reset {
+      font-weight: lighter;
+      font-size: 0.3rem; 
+  }     
+
+  .inkText {
+      font-size: 0rem;   
+  }
+
+  /*PRINT*/
+  .pBefore, .pAfter {
+      height: 180px;
+  }
+
+  .print {
+      background-size: 200px;
+  }
+
+  /*BITMAP*/
+  .bitmapGroup {
+      height: 220px;
+  }
+}  
+/*SMALLEST SIZE ABOVE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
+/*END MEDIA QUERIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*FOOTER - LINKS TO OTHER EXAMPLES*/
+footer ul li{
+  float: left;
+  list-style: none;   
+  padding: 0px 36px 0px 0px;
+  font-family: "Century Gothic", "Helvetica", sans-serif;  
+}
+
+footer .right {
+  float: right;
+}
+
+footer li, footer li a:link, footer li a:visited {
+  color: #b2a9a2;
+/*    color: rgba(112, 102, 95, 0.5);*/
+  text-decoration: none;
+}
+
+footer li a:hover {
+  color: rgba(112, 102, 95, 0.9);
+}
+
+/*ANIMATION*/
+.slideRT {
+  -webkit-animation: slideRT 1.5s ease-in-out 1 forwards;
+          animation: slideRT 1.5s ease-in-out 1 forwards;
+}
+
+.slideLT {
+  -webkit-animation: slideLT 1.5s ease-in-out 1 forwards;
+          animation: slideLT 1.5s ease-in-out 1 forwards;
+}
+
+@-webkit-keyframes slideRT {
+  0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+  }  
+  100% {
+      -webkit-transform: translateX(102%);
+              transform: translateX(102%);
+  }  
+}
+
+@-webkit-keyframes slideLT {
+  0% {
+      -webkit-transform: translateX(102%);
+              transform: translateX(102%);
+  }  
+  100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+  }  
+}
+
+@keyframes slideRT {
+  0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+  }  
+  100% {
+      -webkit-transform: translateX(102%);
+              transform: translateX(102%);
+  }  
+}
+
+@keyframes slideLT {
+  0% {
+      -webkit-transform: translateX(102%);
+              transform: translateX(102%);
+  }  
+  100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+  }  
 }
