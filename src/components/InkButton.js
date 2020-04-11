@@ -5,11 +5,11 @@ class InkButton extends Component {
 
   buttonPressed() {
     // Destructuring
-    const { id, name, color, labelColor } = this.props.button;
+    const { id, name, inkColor, labelColor } = this.props.button;
     return (
       <button 
         key={id}
-        className={`${labelColor} ink ${color} active`} 
+        className={`${labelColor} ink ${inkColor} active`} 
         id={id} 
         onClick={this.props.clickHandler.bind(this, id)}> 
           {name} 
@@ -19,11 +19,11 @@ class InkButton extends Component {
 
   buttonUnpressed() {
     // Destructuring
-    const { id, name, color, labelColor } = this.props.button;
+    const { id, name, inkColor, labelColor } = this.props.button;
     return (
       <button 
         key={id}
-        className={`${labelColor} ink ${color}`} 
+        className={`${labelColor} ink ${inkColor}`} 
         id={id} 
         onClick={this.props.clickHandler.bind(this, id)}> 
           {name} 

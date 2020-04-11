@@ -10,43 +10,43 @@ class SideBySide extends Component {
         { 
           id: 'p1', 
           name: 'ub',
-          color: 'i1',
-          labelColor: 'inkText',
+          inkColor: 'i1',
+          labelColor: 'darkText',
           isPressed: false
         },
         { 
           id: 'p2', 
           name: '7532',
-          color: 'i2',
-          labelColor: 'inkText',
+          inkColor: 'i2',
+          labelColor: 'darkText',
           isPressed: false
         },
         { 
           id: 'p3', 
           name: '468',
-          color: 'i3',
-          labelColor: 'inkText',
+          inkColor: 'i3',
+          labelColor: 'darkText',
           isPressed: false
         },
         { 
           id: 'p4', 
           name: '174',
-          color: 'i4',
-          labelColor: 'inkText',
+          inkColor: 'i4',
+          labelColor: 'lightText',
           isPressed: false
         },
         { 
           id: 'p5', 
           name: 'wht',
-          color: 'i5',
-          labelColor: 'inkText',
+          inkColor: 'i5',
+          labelColor: 'darkText',
           isPressed: false
         },
         { 
           id: 'pReset', 
           name: 'reset',
-          color: 'reset',
-          labelColor: '',
+          inkColor: 'reset',
+          labelColor: 'lightText',
           isPressed: false
         }
       ],
@@ -97,7 +97,7 @@ class SideBySide extends Component {
     console.log(...this.state.buttons); 
   }
 
-  
+
   render() {
     return (
       <div>

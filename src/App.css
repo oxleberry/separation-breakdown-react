@@ -119,7 +119,6 @@ button.ink.active {
 
 .reset {
   background: rgba(255, 255, 255, 0.2);
-  color: white;
 }
 
 /*INK COLORS - CHANGE THESE PER DESIGN*/
@@ -147,6 +146,9 @@ button.ink.active {
   height: 40px;
   display: inline-block;
   position: relative;
+  font-weight: bold;
+  font-size: 1.4rem;   
+  font-family: sans-serif;  
 } 
 
 /* HIGH RES PRINT ART */
@@ -307,11 +309,12 @@ button.ink.active {
     font-size: 1.4rem; 
   }    
 
-  .inkText {
-      color: black;
-      font-weight: bold;
-      font-size: 1.4rem;   
-      font-family: sans-serif;  
+  .darkText {
+    color: black;
+  }
+
+  .lightText {
+    color: white; 
   }
 
   /*PRINT*/
@@ -341,7 +344,8 @@ button.ink.active {
       font-size: 1.4rem; 
   }   
 
-  .inkText {
+  .darkText,
+  .lightText {
       font-size: 0rem;   
   }
 
@@ -373,7 +377,8 @@ button.ink.active {
       font-size: 0.3rem; 
   }     
 
-  .inkText {
+  .darkText,
+  .lightText {
       font-size: 0rem;   
   }
 
