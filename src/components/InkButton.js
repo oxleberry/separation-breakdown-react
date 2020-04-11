@@ -2,58 +2,47 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class InkButton extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isPressed: false
-    }
-    this.clickHandler = this.clickHandler.bind(this)
-  }
-
-  clickHandler() {
-    let pressed = this.state.isPressed;
-    this.setState({isPressed: !pressed})
-  }
 
   buttonPressed() {
+    // Destructuring
+    const { id, name, color, labelColor } = this.props.button;
     return (
-      <button className={`${this.props.labelColor} ink ${this.props.color} active`} id={this.props.id} onClick={this.clickHandler}> 
-        {this.props.name} 
+      <button 
+        key={id}
+        className={`${labelColor} ink ${color} active`} 
+        id={id} 
+        onClick={this.props.clickHandler.bind(this, id)}> 
+          {name} 
       </button>
     )
   }
 
-  buttonDisplayed() {
+  buttonUnpressed() {
+    // Destructuring
+    const { id, name, color, labelColor } = this.props.button;
     return (
-      <button className={`${this.props.labelColor} ink ${this.props.color}`} id={this.props.id} onClick={this.clickHandler}> 
-        {this.props.name} 
+      <button 
+        key={id}
+        className={`${labelColor} ink ${color}`} 
+        id={id} 
+        onClick={this.props.clickHandler.bind(this, id)}> 
+          {name} 
       </button>
     )
   }
 
   render() {
-    if (this.state.isPressed) {
+    if (this.props.button.isPressed) {
       return this.buttonPressed();
     } else {
-      return this.buttonDisplayed();
+      return this.buttonUnpressed();
     }
   }
 }
 
 // Type Checking
 InkButton.propTypes = { 
-  name:PropTypes.string,
-  color:PropTypes.string,
-  labelColor:PropTypes.string,
-  id:PropTypes.string
-}
-
-// Set Default Props
-InkButton.defaultProps = {
-  name: 'empty',
-  color: 'reset',
-  labelColor: 'inkText',
-  id: ''
+  button:PropTypes.object,
 }
 
 export default InkButton;
