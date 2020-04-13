@@ -61,7 +61,8 @@ class SideBySide extends Component {
           origOrder: '',
           screenOrder: ''
         }
-      ]
+      ],
+      reset: false
     }
   }
 
@@ -71,9 +72,23 @@ class SideBySide extends Component {
       if (button.id === id) {
         button.isPressed = !button.isPressed;
         console.log(button.id); 
+        if (button.id === 'pReset'){
+          this.setState({reset: true});
+          this.resetHandler();
+        }
       }
       return button;
     }) });
+  }
+
+  resetHandler = () => {
+    console.log(this.state.reset);
+    console.log("IN RESET FUNCTION")
+    this.setState({ buttons: [...this.state.buttons].map((button, i) => {
+      button.isPressed = false;
+      return button;
+    }) });
+    this.setState({reset: false})
   }
 
   render() {
@@ -82,7 +97,7 @@ class SideBySide extends Component {
         <h2> SCREENPRINT BREAKDOWN</h2>
         <div className="wrap">
           <div className="screenprint">
-            <InkButtonList buttons={this.state.buttons} clickHandler={this.clickHandler}/>
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
             <ScreenList buttons={this.state.buttons} />
           </div>
         </div>
