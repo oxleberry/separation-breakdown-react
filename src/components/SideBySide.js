@@ -14,7 +14,7 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p1',
-          screenOrder: 'p1'
+          screenOrder: ''
         },
         { 
           id: 'p2', 
@@ -23,7 +23,7 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p2',
-          screenOrder: 'p2'
+          screenOrder: ''
         },
         { 
           id: 'p3', 
@@ -32,7 +32,7 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p3',
-          screenOrder: 'p3'
+          screenOrder: ''
         },
         { 
           id: 'p4', 
@@ -41,7 +41,7 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p4',
-          screenOrder: 'p4'
+          screenOrder: ''
         },
         { 
           id: 'p5', 
@@ -50,7 +50,7 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p5',
-          screenOrder: 'p5'
+          screenOrder: ''
         },
         { 
           id: 'pReset', 
@@ -62,16 +62,17 @@ class SideBySide extends Component {
           screenOrder: ''
         }
       ],
-      reset: false
+      reset: false,
+      countPos: 1
     }
   }
 
   // Toggle Ink Button
   clickHandler = (id) => {
-    this.setState({ buttons: [...this.state.buttons].map((button, i) => {
+    this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === id) {
         button.isPressed = !button.isPressed;
-        console.log(button.id); 
+        this.screenOrderHandler(button.id);
         if (button.id === 'pReset'){
           this.setState({reset: true});
           this.resetHandler();
@@ -82,13 +83,25 @@ class SideBySide extends Component {
   }
 
   resetHandler = () => {
-    console.log(this.state.reset);
-    console.log("IN RESET FUNCTION")
-    this.setState({ buttons: [...this.state.buttons].map((button, i) => {
+    this.setState({ buttons: [...this.state.buttons].map((button) => {
       button.isPressed = false;
+      button.screenOrder = '';
       return button;
     }) });
-    this.setState({reset: false})
+    this.setState({reset: false, countPos: 1});
+  }
+
+  screenOrderHandler = (screen) => {    
+    let currentCount = this.state.countPos;
+    const currentScreenArr = screen.split('');
+    const currentPos = currentScreenArr[0] + currentCount;
+    this.setState({ buttons: [...this.state.buttons].map((button) => {
+      if (button.id === currentPos) {
+        button.screenOrder = screen;
+      }
+      return button;
+    }) });
+    this.setState({countPos: currentCount + 1});
   }
 
   render() {
