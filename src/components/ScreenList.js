@@ -25,6 +25,7 @@ class ScreenList extends Component {
       <div className="printGroup">
         <div className="pBefore">
           {eachScreen}
+          <div class="print pAll"></div>
         </div>
         <div className="pAfter">
           <div className="print"></div>

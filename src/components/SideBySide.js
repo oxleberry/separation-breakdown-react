@@ -14,7 +14,8 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p1',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         },
         { 
           id: 'p2', 
@@ -23,7 +24,8 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p2',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         },
         { 
           id: 'p3', 
@@ -32,7 +34,8 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p3',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         },
         { 
           id: 'p4', 
@@ -41,7 +44,8 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p4',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         },
         { 
           id: 'p5', 
@@ -50,7 +54,8 @@ class SideBySide extends Component {
           labelColor: 'darkText',
           isPressed: false,
           origOrder: 'order_p5',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         },
         { 
           id: 'pReset', 
@@ -59,7 +64,8 @@ class SideBySide extends Component {
           labelColor: 'lightText',
           isPressed: false,
           origOrder: '',
-          screenOrder: ''
+          screenOrder: '',
+          screenAnimation: ''
         }
       ],
       reset: false,
@@ -67,12 +73,13 @@ class SideBySide extends Component {
     }
   }
 
-  // Toggle Ink Button
   clickHandler = (id) => {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === id) {
-        button.isPressed = !button.isPressed;
-        this.screenOrderHandler(button.id);
+        if (button.isPressed === false) {
+          button.isPressed = true;
+          this.screenOrderHandler(button.id);
+        }
         if (button.id === 'pReset'){
           this.setState({reset: true});
           this.resetHandler();
@@ -85,7 +92,7 @@ class SideBySide extends Component {
   resetHandler = () => {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       button.isPressed = false;
-      button.screenOrder = '';
+      button.screenAnimation = 'slideLT';
       return button;
     }) });
     this.setState({reset: false, countPos: 1});
@@ -98,6 +105,7 @@ class SideBySide extends Component {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === currentPos) {
         button.screenOrder = screen;
+        button.screenAnimation = 'slideRT';
       }
       return button;
     }) });

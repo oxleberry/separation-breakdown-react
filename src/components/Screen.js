@@ -4,26 +4,11 @@ import PropTypes from 'prop-types';
 
 class Screen extends Component {
 
-  slideRight() {
-    const { origOrder, screenOrder } = this.props.screen;
-    return (
-      <div className={`print ${origOrder} ${screenOrder} slideRT`}></div>
-    )
- }
-
-  screenDisplay() {
-    const { origOrder, screenOrder } = this.props.screen;
-    return (
-      <div className={`print ${origOrder} ${screenOrder}`}></div>
-    )
-  }
-
   render() {
-    if (this.props.screen.isPressed) {
-      return this.slideRight();
-    } else {
-      return this.screenDisplay();
-    }
+    const { origOrder, screenOrder, screenAnimation } = this.props.screen;
+    return (
+      <div className={`print ${origOrder} ${screenOrder} ${screenAnimation}`}></div>
+    )
   }
 }
 
