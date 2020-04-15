@@ -91,11 +91,26 @@ class SideBySide extends Component {
 
   resetHandler = () => {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
-      button.isPressed = false;
       button.screenAnimation = 'slideLT';
       return button;
     }) });
+    this.delayClearOrder();
     this.setState({reset: false, countPos: 1});
+  }
+
+  clearOrder = () => {
+    this.setState({ buttons: [...this.state.buttons].map((button) => {
+      button.isPressed = false;
+      button.screenOrder = '';
+      return button;
+    }) });
+  }
+
+  // delays the buttons being reset, until after the animation is complete.
+  delayClearOrder = () => {
+    setTimeout(() => { 
+      this.clearOrder(); 
+    }, 1530);
   }
 
   screenOrderHandler = (screen) => {    
