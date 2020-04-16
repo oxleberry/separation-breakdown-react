@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InkButtonList from '../components/InkButtonList';
 import ScreenList from '../components/ScreenList';
+import BitmapList from '../components/BitmapList';
 
 class SideBySide extends Component {
   constructor(props) {
@@ -8,57 +9,57 @@ class SideBySide extends Component {
     this.state = {
       buttons: [
         { 
-          id: 'p1', 
+          id: 1, 
           name: 'ub',
           inkColor: 'i1',
           labelColor: 'darkText',
           isPressed: false,
-          origOrder: 'order_p1',
+          origOrder: '1',
           screenOrder: '',
           screenAnimation: ''
         },
         { 
-          id: 'p2', 
+          id: 2, 
           name: '7532',
           inkColor: 'i2',
           labelColor: 'darkText',
           isPressed: false,
-          origOrder: 'order_p2',
+          origOrder: '2',
           screenOrder: '',
           screenAnimation: ''
         },
         { 
-          id: 'p3', 
+          id: 3, 
           name: '468',
           inkColor: 'i3',
           labelColor: 'darkText',
           isPressed: false,
-          origOrder: 'order_p3',
+          origOrder: '3',
           screenOrder: '',
           screenAnimation: ''
         },
         { 
-          id: 'p4', 
+          id: 4, 
           name: '174',
           inkColor: 'i4',
           labelColor: 'darkText',
           isPressed: false,
-          origOrder: 'order_p4',
+          origOrder: '4',
           screenOrder: '',
           screenAnimation: ''
         },
         { 
-          id: 'p5', 
+          id: 5, 
           name: 'wht',
           inkColor: 'i5',
           labelColor: 'darkText',
           isPressed: false,
-          origOrder: 'order_p5',
+          origOrder: '5',
           screenOrder: '',
           screenAnimation: ''
         },
         { 
-          id: 'pReset', 
+          id: 'reset', 
           name: 'reset',
           inkColor: 'reset',
           labelColor: 'lightText',
@@ -80,7 +81,7 @@ class SideBySide extends Component {
           button.isPressed = true;
           this.screenOrderHandler(button.id);
         }
-        if (button.id === 'pReset'){
+        if (button.id === 'reset'){
           this.setState({reset: true});
           this.resetHandler();
         }
@@ -115,10 +116,9 @@ class SideBySide extends Component {
 
   screenOrderHandler = (screen) => {    
     let currentCount = this.state.countPos;
-    const currentScreenArr = screen.split('');
-    const currentPos = currentScreenArr[0] + currentCount;
     this.setState({ buttons: [...this.state.buttons].map((button) => {
-      if (button.id === currentPos) {
+      if (button.id === currentCount) {
+        console.log(screen);
         button.screenOrder = screen;
         button.screenAnimation = 'slideRT';
       }
@@ -135,6 +135,13 @@ class SideBySide extends Component {
           <div className="screenprint">
             <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
             <ScreenList buttons={this.state.buttons} />
+          </div>
+        </div>
+        <h2> HALFTONE CLOSEUP </h2>
+        <div className="wrap">
+          <div className="screenprint">
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+            <BitmapList buttons={this.state.buttons} />
           </div>
         </div>
       </div>

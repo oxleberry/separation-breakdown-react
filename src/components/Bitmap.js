@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-class Screen extends Component {
+class Bitmap extends Component {
 
   render() {
     const { origOrder, screenOrder, screenAnimation } = this.props.screen;
     return (
-      <div className={`print order_p${origOrder} p${screenOrder} ${screenAnimation}`}></div>
+      <div className={`bitmap order_b${origOrder} b${screenOrder} ${screenAnimation}`}></div>
     )
   }
 }
 
 // Type Checking
-Screen.propTypes = { 
+Bitmap.propTypes = { 
   screen:PropTypes.object
 }
 
-export default Screen;
+export default Bitmap;
