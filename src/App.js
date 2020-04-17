@@ -1,6 +1,7 @@
 import React from 'react';
 import Intro from './components/Intro';
 import SideBySide from './components/SideBySide';
+import Overview from './components/Overview';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Intro />
       <SideBySide />
+      <Overview />
     </div>
   );
 }

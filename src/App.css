@@ -298,6 +298,9 @@ button.ink.active {
   height: 25px;
   width: 100%;
   border-radius: 0px;
+  font-weight: bold;
+  font-size: 1.4rem;   
+  font-family: sans-serif;  
 }
 
 .all{
@@ -311,7 +314,7 @@ button.ink.active {
 
 .aAll, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12{
   background-repeat: no-repeat;
-  background-size: 7rem;
+  background-size: 11rem;
   background-position: 50% 50%;
   /*ADJUSTS THE PLACEMENT*/
 }
