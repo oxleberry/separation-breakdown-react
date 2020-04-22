@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InkButtonList from '../components/InkButtonList';
 import ScreenList from '../components/ScreenList';
 import BitmapList from '../components/BitmapList';
+import '../styles/sideBySide.scss';
 
 class SideBySide extends Component {
   constructor(props) {
@@ -129,21 +130,25 @@ class SideBySide extends Component {
 
   render() {
     return (
-      <div>
-        <h2> SCREENPRINT BREAKDOWN</h2>
-        <div className="wrap">
-          <div className="screenprint">
-            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
-            <ScreenList buttons={this.state.buttons} />
+      <div className="sideBySide">
+        <section>
+          <h2> SCREENPRINT BREAKDOWN</h2>
+          <div className="wrap">
+            <div className="screenprint">
+              <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+              <ScreenList buttons={this.state.buttons} />
+            </div>
           </div>
-        </div>
-        <h2> HALFTONE CLOSEUP </h2>
-        <div className="wrap">
-          <div className="screenprint">
-            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
-            <BitmapList buttons={this.state.buttons} />
+        </section>
+        <section>
+          <h2> HALFTONE CLOSEUP </h2>
+          <div className="wrap">
+            <div className="screenprint">
+              <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+              <BitmapList buttons={this.state.buttons} />
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     )
   }

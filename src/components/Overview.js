@@ -4,7 +4,7 @@ class Overview extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <h2>OVERVIEW</h2>
         <div class="wrap">
           <div class="screenprint">
@@ -26,7 +26,7 @@ class Overview extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

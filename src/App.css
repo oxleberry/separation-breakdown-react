@@ -1,4 +1,4 @@
-body{
+/* body{
   background: #ddd7d2;
   text-align: center;
 }
@@ -8,12 +8,12 @@ h2 {
   font-size: 4.5rem;
   margin-bottom: 25px;   
   color: #70665f;
-}
+} */
 
-.ox-shadow{
+/* .ox-shadow{
   -webkit-box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /*CHANGE BACKGROUND TO SHIRT COLORS*/
 .wrap {
@@ -23,12 +23,11 @@ h2 {
   vertical-align: middle;
   margin-bottom: 50px;
   background: black;
-  -webkit-box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
 }
 
 /*MAIN SECTIONS*/
-.screenprint .inkGroup, 
+/* .screenprint .inkGroup, 
 .screenprint .printGroup, 
 .screenprint .bitmapGroup, 
 .screenprint .artGroup, 
@@ -39,12 +38,12 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
+} */
 
-.teeGroup {
+/* .teeGroup {
   border: 2px solid #474747;
   background-color: white;
-}
+} */
 
 .inkGroup {
 /*    border: 2px solid #474747;*/
@@ -65,7 +64,7 @@ h2 {
 }
 
 /*TEE SAMPLE & ACHKNOWLEGEMENTS*/
-.tBefore, .tAfter {
+/* .tBefore, .tAfter {
   position: relative;
   height: 200px;
   width: 50%;
@@ -94,7 +93,7 @@ h2 {
   width: 100%;
   background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/tee.jpg) center no-repeat; 
   background-size: 200px;
-}
+} */
 
 /* INK BUTTONS */
 button {
@@ -122,7 +121,7 @@ button.ink.active {
 }
 
 /*INK COLORS - CHANGE THESE PER DESIGN*/
-.i1, .ib1 {
+/* .i1, .ib1 {
   background: rgba(255, 255, 255, 0.7);  
 }
 
@@ -140,7 +139,7 @@ button.ink.active {
 
 .i5, .ib5 {
   background: rgba(255, 255, 255, 1);
-}
+} */
 
 .ink {
   height: 40px;
@@ -158,17 +157,17 @@ button.ink.active {
   opacity: 1;
 }
 
-.fade {
+/* .fade {
   transition: opacity 10000ms ease;
   opacity: 0;
-}
+} */
 
 /* .print {
   transition: opacity 10000ms ease;
   opacity: 0;
 } */
 
-.print.p0 {
+/* .print.p0 {
   transition: opacity 10000ms ease;
   opacity: 0;
 }
@@ -176,7 +175,7 @@ button.ink.active {
 .p0 {
   opacity: 0;
   transition: opacity 10000ms ease;
-}
+} */
 
 /*UB*/
 .p1, .a1 {   

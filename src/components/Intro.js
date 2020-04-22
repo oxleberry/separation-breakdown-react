@@ -1,23 +1,21 @@
 import React from 'react';
+import '../styles/intro.scss';
 
-const Intro = (props) => {
+const Intro = () => {
   return (
-    <section>
-    <br />
-    <br />
-    <h2> PRINTED ONESIE </h2>
-    <div className="wrap">
-      <div className="screenprint">
-        <div className="teeGroup">
-          <div className="tBefore">
-          <p>Design from the De Young Museum. <br />
-          Color Separations by Oxleberry.</p>
+    <section className="intro">
+      <h2> PRINTED TEE </h2>
+      <div className="wrap">
+        <div className="innerWrap">
+          <div className="description-container">
+            <p>Design from the De Young Museum.<br />Color Separations by Oxleberry.</p>
           </div>
-          <div className="tAfter"><div className="t0"></div></div>
+          <div className="image-container">
+            <div className="image"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   )
 }
 

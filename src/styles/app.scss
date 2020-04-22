@@ -1,0 +1,42 @@
+body {
+  background: #ddd7d2;
+  text-align: center;
+}
+
+h2 {
+  color: #70665f;
+  font-family: 'Futura', sans-serif; 
+  font-size: 4.5rem;
+  margin-bottom: 25px;   
+}
+
+/*MAIN SECTIONS*/
+.inkGroup, 
+.printGroup, 
+.bitmapGroup, 
+.artGroup {
+  display: flex;
+  justify-content: center;
+}
+
+/* INK COLORS - CHANGE THESE PER DESIGN */
+.i1 { /* underbase */
+  background: #ffffff;
+  opacity: .7;  
+}
+
+.i2 {  
+  background: #675545;
+}
+
+.i3 {
+  background: #c9b280;
+}
+
+.i4 {
+  background: #9d3d25;
+}
+
+.i5 {
+  background: #ffffff;
+}
