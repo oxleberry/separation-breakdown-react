@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InkButtonList from '../components/InkButtonList';
 import ScreenList from '../components/ScreenList';
 import BitmapList from '../components/BitmapList';
-import '../styles/sideBySide.scss';
 
 class SideBySide extends Component {
   constructor(props) {
@@ -63,7 +62,7 @@ class SideBySide extends Component {
           id: 'reset', 
           name: 'reset',
           inkColor: 'reset',
-          labelColor: 'lightText',
+          labelColor: 'resetText',
           isPressed: false,
           origOrder: '',
           screenOrder: '',

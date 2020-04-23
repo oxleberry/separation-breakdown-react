@@ -1,0 +1,99 @@
+// Ink Color Variables
+// $color-1: #ffffff;
+// $color-2: #675545;
+// $color-3: #c9b280;
+// $color-4: #9d3d25;
+// $color-5: #ffffff;
+
+.button-list {
+  /* INK COLORS - CHANGE THESE PER DESIGN */
+  .i1 { /* underbase */
+    background: #ffffff;
+    opacity: .7;  
+  }
+
+  .i2 {  
+    background: #675545;
+  }
+
+  .i3 {
+    background: #c9b280;
+  }
+
+  .i4 {
+    background: #9d3d25;
+  }
+
+  .i5 {
+    background: #ffffff;
+  }
+
+  /* INK BUTTONS */
+  .ink {
+    width: 13%;
+    border-style: none;
+    border-radius: 6px;
+    height: 40px;
+    margin-bottom: 8px;
+    display: inline-block;
+
+    @include bp(s) {
+      width: 8%;   /*Divide the # of Ink Colors and adjust accoringly*/
+    }
+  }
+
+  .ink:focus,
+  .ink-overview {
+    border: none;
+    outline: none
+  }
+
+  .ink:hover {
+    opacity: 0.6;
+  }
+
+  .ink.active {
+    opacity: 0.6;
+    transform: translateY(2px);   
+  }
+
+  .darkText {
+    color: black;
+    font-weight: bold;
+    font-size: 0rem;   
+    font-family: sans-serif;  
+
+    @include bp(s) {
+      font-size: 1.4rem; 
+    }
+  }
+
+  .lightText {
+    font-weight: bold;
+    font-size: 0rem;   
+    font-family: sans-serif;  
+    color: white; 
+
+    @include bp(s) {
+      font-size: 1.4rem; 
+    }
+  }
+
+  .resetText {
+    font-weight: 200;
+    font-size: 1.4rem;   
+    font-family: sans-serif;  
+    color: white; 
+    transform: translateY(4px);
+
+    @include bp(s) {
+      font-weight: 400;
+      transform: translateY(0);
+      font-size: 1.4rem; 
+    }
+  }
+
+  .reset {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

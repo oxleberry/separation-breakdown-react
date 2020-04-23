@@ -31,6 +31,10 @@ class InkButton extends Component {
     )
   }
 
+  // if condition, that will reneder the element based on if
+  // this.state.display is true
+  // {this.state.display && <h1>Displayed!</h1>}
+
   render() {
     if (this.props.button.isPressed) {
       return this.buttonPressed();

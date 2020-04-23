@@ -45,10 +45,9 @@ h2 {
   background-color: white;
 } */
 
-.inkGroup {
-/*    border: 2px solid #474747;*/
+/* .inkGroup {
   border-bottom: none;
-}
+} */
 
 .printGroup {
   border: 2px solid #474747;  
@@ -96,7 +95,7 @@ h2 {
 } */
 
 /* INK BUTTONS */
-button {
+/* button {
   border-style: none;
   border-radius: 6px;
   height: 40px;
@@ -118,7 +117,7 @@ button.ink.active {
 
 .reset {
   background: rgba(255, 255, 255, 0.2);
-}
+} */
 
 /*INK COLORS - CHANGE THESE PER DESIGN*/
 /* .i1, .ib1 {
@@ -141,14 +140,14 @@ button.ink.active {
   background: rgba(255, 255, 255, 1);
 } */
 
-.ink {
+/* .ink {
   height: 40px;
   display: inline-block;
   position: relative;
   font-weight: bold;
   font-size: 1.4rem;   
   font-family: sans-serif;  
-} 
+}  */
 
 /* HIGH RES PRINT ART */
 /*ALL*/
@@ -293,7 +292,7 @@ button.ink.active {
   background-color: black;
 }
 
-.inkAll{
+.ink-overview {
   height: 25px;
   width: 100%;
   border-radius: 0px;
@@ -323,21 +322,21 @@ button.ink.active {
 @media (min-width: 881px) {
 
   /*INK*/
-  button {
-      width: 8%;   /*Divide the # of Ink Colors and adjust accoringly*/
-  }
+  /* button {
+      width: 8%; 
+  } */
 
-  .reset {
+  /* .reset {
     font-size: 1.4rem; 
-  }    
+  }     */
 
-  .darkText {
+  /* .darkText {
     color: black;
   }
 
   .lightText {
     color: white; 
-  }
+  } */
 
   /*PRINT*/
   .pBefore, .pAfter {
@@ -358,18 +357,18 @@ button.ink.active {
 @media screen and (max-width: 880px) and (min-width: 401px) {
 
   /*INK*/
-  button {
-      width: 14%;   /*Divide the # of Ink Colors and adjust accoringly*/
-  }
+  /* button {
+      width: 14%;  
+  } */
 
-  .reset {
+  /* .reset {
       font-size: 1.4rem; 
-  }   
+  }    */
 
-  .darkText,
+  /* .darkText,
   .lightText {
       font-size: 0rem;   
-  }
+  } */
 
   /*PRINT*/
   .pBefore, .pAfter {
@@ -390,19 +389,19 @@ button.ink.active {
 @media (max-width: 400px){
 
   /*INK*/
-  button {
-      width: 15%;   /*Divide the # of Ink Colors and adjust accoringly*/
-  }
+  /* button {
+      width: 15%;   
+  } */
 
-  .reset {
+  /* .reset {
       font-weight: lighter;
       font-size: 0.3rem; 
-  }     
+  }      */
 
-  .darkText,
+  /* .darkText,
   .lightText {
       font-size: 0rem;   
-  }
+  } */
 
   /*PRINT*/
   .pBefore, .pAfter {

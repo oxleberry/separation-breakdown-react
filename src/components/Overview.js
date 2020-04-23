@@ -6,23 +6,23 @@ class Overview extends Component {
     return (
       <section>
         <h2>OVERVIEW</h2>
-        <div class="wrap">
-          <div class="screenprint">
-            <div class="inkGroup">
-                <button class="darkText inkAll i0">all</button>
-                <button class="darkText inkAll i1">ub</button>
-                <button class="darkText inkAll i2">7532</button>
-                <button class="darkText inkAll i3">468</button>
-                <button class="darkText inkAll i4">174</button>
-                <button class="darkText inkAll i5">wht</button>
+        <div className="wrap">
+          <div className="screenprint">
+            <div className="inkGroup button-list">
+                <button className="darkText ink-overview i0">all</button>
+                <button className="darkText ink-overview i1">ub</button>
+                <button className="darkText ink-overview i2">7532</button>
+                <button className="darkText ink-overview i3">468</button>
+                <button className="darkText ink-overview i4">174</button>
+                <button className="darkText ink-overview i5">wht</button>
             </div>
-            <div class="artGroup">
-              <div class="aBefore"><div class="all aAll"></div></div>
-              <div class="aAfter"><div class="all a1"></div></div>
-              <div class="aAfter"><div class="all a2"></div></div>
-              <div class="aAfter"><div class="all a3"></div></div>
-              <div class="aAfter"><div class="all a4"></div></div>
-              <div class="aAfter"><div class="all a5"></div></div>
+            <div className="artGroup">
+              <div className="aBefore"><div className="all aAll"></div></div>
+              <div className="aAfter"><div className="all a1"></div></div>
+              <div className="aAfter"><div className="all a2"></div></div>
+              <div className="aAfter"><div className="all a3"></div></div>
+              <div className="aAfter"><div className="all a4"></div></div>
+              <div className="aAfter"><div className="all a5"></div></div>
             </div>
           </div>
         </div>
