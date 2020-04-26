@@ -1,3 +1,195 @@
-.sideBySide {
+.printGroup {
+  .pAll, .aAll {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
+    opacity: 1;
+  }
 
+  .p1, .a1 {   
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png); 
+    opacity: 0.7;
+  }
+  
+  .p2, .a2 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png); 
+    opacity: 1; 
+  }
+  
+  .p3, .a3 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png);  
+    opacity: 1;
+  }
+  
+  .p4, .a4 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png);  
+    opacity: 1;
+  }
+  
+  .p5, .a5 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png); 
+    opacity: 1;
+  }
+  
+  .pBefore, .pAfter {
+    position: relative;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    height: 180px; 
+
+    @include bp(s) {
+      height: 200px;
+    }
+
+    @include bp(m) {
+      height: 400px;
+    }
+  }
+  
+  .print {
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 200px;
+
+    @include bp(s) {
+      background-size: 280px;
+    }
+
+    @include bp(m) {
+      background-size: 350px;
+    }
+  }
+
+  /*ADJUSTS THE PLACEMENT*/
+  .pAll, .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12{
+    background-repeat: no-repeat;
+    background-position: 15%;
+  }
+}
+
+.bitmapGroup {
+  height: 220px;
+
+  @include bp(s) {
+    height: 280px;
+  }
+
+  @include bp(m) {
+    height: 500px;
+  }
+
+  /*ALL*/
+  .bAll {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bitAll.png); 
+    opacity: 1;
+  }
+
+  .b1 {   
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit1.png); 
+    opacity: 0.6;
+  }
+
+  .b2 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit2.png);
+    opacity: 1; 
+  }
+
+  .b3 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit3.png); 
+    opacity: 1;
+  }
+
+  .b4 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit4.png); 
+    opacity: 1;
+  }
+
+  .b5 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit5.png); 
+    opacity: 1;
+  }
+
+  /*ADJUSTS THE PLACEMENT*/
+  .bAll, .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12{
+    background-size: 216%;
+    background-repeat: no-repeat;
+    background-position: 72% 44%;
+  }
+
+  .bBefore, .bAfter {
+    position: relative;
+    width: 50%;
+    margin: 5px;
+    padding: 5px; 
+  }
+  
+  .bBefore{
+    z-index: 8;
+  }
+  
+  .bitmap {
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.artGroup {
+  .pAll, .aAll {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
+    opacity: 1;
+  }
+
+  .p1, .a1 {   
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png); 
+    opacity: 0.7;
+  }
+  
+  .p2, .a2 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png); 
+    opacity: 1; 
+  }
+  
+  .p3, .a3 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png);  
+    opacity: 1;
+  }
+  
+  .p4, .a4 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png);  
+    opacity: 1;
+  }
+  
+  .p5, .a5 {
+    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png); 
+    opacity: 1;
+  }
+
+  .aBefore, .aAfter {
+    position: relative;
+    height: 140px;
+    width: 100%;
+    margin: 3px;
+    background-color: black;
+  }
+  
+  .all{
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 180px;
+  }
+  
+  /*ADJUSTS THE PLACEMENT*/
+  .aAll, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12{
+    background-repeat: no-repeat;
+    background-size: 11rem;
+    background-position: 50% 50%;
+  }
 }
