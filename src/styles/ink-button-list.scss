@@ -1,108 +1,106 @@
 // Ink Color Variables
-// $color-1: #ffffff;
-// $color-2: #675545;
-// $color-3: #c9b280;
-// $color-4: #9d3d25;
-// $color-5: #ffffff;
+$color-1: rgba(255, 255, 255, 0.7);
+$color-2: #675545;
+$color-3: #c9b280;
+$color-4: #9d3d25;
+$color-5: #ffffff;
 
-.button-list {
-  /* INK COLORS - CHANGE THESE PER DESIGN */
-  .i1 { /* underbase */
-    background: #ffffff;
-    opacity: .7;  
+.ink-button-list {
+  text-align: center;
+
+  .color-1 { /* underbase */
+    background: $color-1;
   }
 
-  .i2 {  
-    background: #675545;
+  .color-2 {
+    background: $color-2;
   }
 
-  .i3 {
-    background: #c9b280;
+  .color-3 {
+    background: $color-3;
   }
 
-  .i4 {
-    background: #9d3d25;
+  .color-4 {
+    background: $color-4;
   }
 
-  .i5 {
-    background: #ffffff;
+  .color-5 {
+    background: $color-5;
+  }
+
+  .color-reset {
+    background: rgba(255, 255, 255, 0.2);
   }
 
   /* INK BUTTONS */
-  .ink {
-    width: 13%;
-    border-style: none;
+  .btn {
     border-radius: 6px;
+    border-style: none;
+    display: inline-block;
     height: 40px;
     margin-bottom: 8px;
-    display: inline-block;
+    width: 13%;
 
     @include bp(s) {
       width: 8%;   /*Divide the # of Ink Colors and adjust accoringly*/
     }
   }
 
-  .ink:focus,
-  .ink-overview {
+  .btn:focus {
     border: none;
     outline: none
   }
 
-  .ink:hover {
+  .btn:hover {
     opacity: 0.6;
   }
 
-  .ink.active {
+  .btn.active {
     opacity: 0.6;
-    transform: translateY(2px);   
+    transform: translateY(2px);
   }
 
   .darkText {
     color: black;
+    font-family: sans-serif;
+    font-size: 0rem;
     font-weight: bold;
-    font-size: 0rem;   
-    font-family: sans-serif;  
 
     @include bp(s) {
-      font-size: 1.4rem; 
+      font-size: 1.4rem;
     }
   }
 
   .lightText {
+    color: white;
+    font-family: sans-serif;
+    font-size: 0rem;
     font-weight: bold;
-    font-size: 0rem;   
-    font-family: sans-serif;  
-    color: white; 
 
     @include bp(s) {
-      font-size: 1.4rem; 
+      font-size: 1.4rem;
     }
   }
 
   .resetText {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.4rem;
     font-weight: 200;
-    font-size: 1.4rem;   
-    font-family: sans-serif;  
-    color: white; 
-    transform: translateY(4px);
 
     @include bp(s) {
+      font-size: 1.4rem;
       font-weight: 400;
-      transform: translateY(0);
-      font-size: 1.4rem; 
     }
   }
 
-  .reset {
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .ink-overview {
+  .overview-btn {
+    border-radius: 0px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
     height: 25px;
     width: 100%;
-    border-radius: 0px;
-    font-weight: bold;
-    font-size: 1.4rem;   
-    font-family: sans-serif;  
   }
 }

@@ -11,8 +11,8 @@ class ScreenList extends Component {
 
   eachScreen(screen, i) {
     return (
-      <Screen 
-        key={i} 
+      <Screen
+        key={i}
         screen={screen}>
       </Screen>
     )
@@ -36,7 +36,7 @@ class ScreenList extends Component {
 }
 
 // // Type Checking
-ScreenList.propTypes = { 
+ScreenList.propTypes = {
   buttons:PropTypes.array
 }
 

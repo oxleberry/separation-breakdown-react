@@ -4,13 +4,13 @@ const Intro = () => {
   return (
     <section className="intro">
       <h2> PRINTED TEE </h2>
-      <div className="wrap">
-        <div className="innerWrap">
-          <div className="description-container">
+      <div className="shirt-wrapper">
+        <div className="intro__content-container">
+          <div className="intro__desc-container">
             <p>Design from the De Young Museum.<br />Color Separations by Oxleberry.</p>
           </div>
-          <div className="image-container">
-            <div className="image"></div>
+          <div className="intro__img-container">
+            <div className="intro__img"></div>
           </div>
         </div>
       </div>

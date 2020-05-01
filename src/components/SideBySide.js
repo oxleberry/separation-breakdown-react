@@ -8,60 +8,60 @@ class SideBySide extends Component {
     super(props)
     this.state = {
       buttons: [
-        { 
-          id: 1, 
+        {
+          id: 1,
           name: 'ub',
-          inkColor: 'i1',
+          inkColor: 'color-1',
           labelColor: 'darkText',
           isPressed: false,
           origOrder: '1',
           screenOrder: '',
           screenAnimation: ''
         },
-        { 
-          id: 2, 
+        {
+          id: 2,
           name: '7532',
-          inkColor: 'i2',
+          inkColor: 'color-2',
           labelColor: 'darkText',
           isPressed: false,
           origOrder: '2',
           screenOrder: '',
           screenAnimation: ''
         },
-        { 
-          id: 3, 
+        {
+          id: 3,
           name: '468',
-          inkColor: 'i3',
+          inkColor: 'color-3',
           labelColor: 'darkText',
           isPressed: false,
           origOrder: '3',
           screenOrder: '',
           screenAnimation: ''
         },
-        { 
-          id: 4, 
+        {
+          id: 4,
           name: '174',
-          inkColor: 'i4',
+          inkColor: 'color-4',
           labelColor: 'darkText',
           isPressed: false,
           origOrder: '4',
           screenOrder: '',
           screenAnimation: ''
         },
-        { 
-          id: 5, 
+        {
+          id: 5,
           name: 'wht',
-          inkColor: 'i5',
+          inkColor: 'color-5',
           labelColor: 'darkText',
           isPressed: false,
           origOrder: '5',
           screenOrder: '',
           screenAnimation: ''
         },
-        { 
-          id: 'reset', 
+        {
+          id: 'reset',
           name: 'reset',
-          inkColor: 'reset',
+          inkColor: 'color-reset',
           labelColor: 'resetText',
           isPressed: false,
           origOrder: '',
@@ -109,12 +109,12 @@ class SideBySide extends Component {
 
   // delays the buttons being reset, until after the animation is complete.
   delayClearOrder = () => {
-    setTimeout(() => { 
-      this.clearOrder(); 
+    setTimeout(() => {
+      this.clearOrder();
     }, 1530);
   }
 
-  screenOrderHandler = (screen) => {    
+  screenOrderHandler = (screen) => {
     let currentCount = this.state.countPos;
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === currentCount) {
@@ -129,23 +129,19 @@ class SideBySide extends Component {
 
   render() {
     return (
-      <div className="sideBySide">
-        <section>
+      <div>
+        <section className="screenprint-container">
           <h2> SCREENPRINT BREAKDOWN</h2>
-          <div className="wrap">
-            <div className="screenprint">
-              <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
-              <ScreenList buttons={this.state.buttons} />
-            </div>
+          <div className="shirt-wrapper">
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+            <ScreenList buttons={this.state.buttons} />
           </div>
         </section>
-        <section>
+        <section className="halftone-container">
           <h2> HALFTONE CLOSEUP </h2>
-          <div className="wrap">
-            <div className="screenprint">
-              <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
-              <BitmapList buttons={this.state.buttons} />
-            </div>
+          <div className="shirt-wrapper">
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+            <BitmapList buttons={this.state.buttons} />
           </div>
         </section>
       </div>

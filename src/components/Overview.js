@@ -8,13 +8,13 @@ class Overview extends Component {
         <h2>OVERVIEW</h2>
         <div className="wrap">
           <div className="screenprint">
-            <div className="inkGroup button-list">
-                <button className="darkText ink-overview i0">all</button>
-                <button className="darkText ink-overview i1">ub</button>
-                <button className="darkText ink-overview i2">7532</button>
-                <button className="darkText ink-overview i3">468</button>
-                <button className="darkText ink-overview i4">174</button>
-                <button className="darkText ink-overview i5">wht</button>
+            <div className="inkGroup ink-button-list">
+                <button className="darkText overview-btn color-5">all</button>
+                <button className="darkText overview-btn color-1">ub</button>
+                <button className="darkText overview-btn color-2">7532</button>
+                <button className="darkText overview-btn color-3">468</button>
+                <button className="darkText overview-btn color-4">174</button>
+                <button className="darkText overview-btn color-5">wht</button>
             </div>
             <div className="artGroup">
               <div className="aBefore"><div className="all aAll"></div></div>
