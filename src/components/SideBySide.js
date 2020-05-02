@@ -14,6 +14,7 @@ class SideBySide extends Component {
           inkColor: 'color-1',
           labelColor: 'darkText',
           isPressed: false,
+          active: '',
           origOrder: '1',
           screenOrder: '',
           screenAnimation: ''
@@ -24,6 +25,7 @@ class SideBySide extends Component {
           inkColor: 'color-2',
           labelColor: 'darkText',
           isPressed: false,
+          active: '',
           origOrder: '2',
           screenOrder: '',
           screenAnimation: ''
@@ -34,6 +36,7 @@ class SideBySide extends Component {
           inkColor: 'color-3',
           labelColor: 'darkText',
           isPressed: false,
+          active: '',
           origOrder: '3',
           screenOrder: '',
           screenAnimation: ''
@@ -44,6 +47,7 @@ class SideBySide extends Component {
           inkColor: 'color-4',
           labelColor: 'darkText',
           isPressed: false,
+          active: '',
           origOrder: '4',
           screenOrder: '',
           screenAnimation: ''
@@ -54,6 +58,7 @@ class SideBySide extends Component {
           inkColor: 'color-5',
           labelColor: 'darkText',
           isPressed: false,
+          active: '',
           origOrder: '5',
           screenOrder: '',
           screenAnimation: ''
@@ -64,6 +69,7 @@ class SideBySide extends Component {
           inkColor: 'color-reset',
           labelColor: 'resetText',
           isPressed: false,
+          active: '',
           origOrder: '',
           screenOrder: '',
           screenAnimation: ''
@@ -74,11 +80,12 @@ class SideBySide extends Component {
     }
   }
 
-  clickHandler = (id) => {
+  btnClickHandler = (id) => {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === id) {
         if (button.isPressed === false) {
           button.isPressed = true;
+          button.active = 'active';
           this.screenOrderHandler(button.id);
         }
         if (button.id === 'reset'){
@@ -102,23 +109,27 @@ class SideBySide extends Component {
   clearOrder = () => {
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       button.isPressed = false;
+      button.active = '';
       button.screenOrder = '';
       return button;
     }) });
   }
 
-  // delays the buttons being reset, until after the animation is complete.
+  // Delays the buttons being reset,
+  // until after the animation is complete.
   delayClearOrder = () => {
     setTimeout(() => {
       this.clearOrder();
     }, 1530);
   }
 
+  // screenOrder: Laysdown the sreenprint/bitmap images in the order
+  // that the user presses down the buttons.
+  // First one on the bottom, last one on the top.
   screenOrderHandler = (screen) => {
     let currentCount = this.state.countPos;
     this.setState({ buttons: [...this.state.buttons].map((button) => {
       if (button.id === currentCount) {
-        console.log(screen);
         button.screenOrder = screen;
         button.screenAnimation = 'slideRT';
       }
@@ -133,14 +144,14 @@ class SideBySide extends Component {
         <section className="screenprint-container">
           <h2> SCREENPRINT BREAKDOWN</h2>
           <div className="shirt-wrapper">
-            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.btnClickHandler}/>
             <ScreenList buttons={this.state.buttons} />
           </div>
         </section>
         <section className="halftone-container">
           <h2> HALFTONE CLOSEUP </h2>
           <div className="shirt-wrapper">
-            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.clickHandler}/>
+            <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.btnClickHandler}/>
             <BitmapList buttons={this.state.buttons} />
           </div>
         </section>
