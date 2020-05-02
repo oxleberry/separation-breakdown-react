@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Screen from '../components/Screen';
+
+class Screen extends Component {
+
+  render() {
+    const { origOrder, screenOrder, screenAnimation } = this.props.screen;
+    return (
+      <div className={`img-wrapper order_screen${origOrder} screen-img${screenOrder} ${screenAnimation}`}></div>
+    )
+  }
+}
+
+// Type Checking
+Screen.propTypes = {
+  screen:PropTypes.object
+}
+
 
 class ScreenList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
-
   eachScreen(screen, i) {
     return (
       <Screen
@@ -22,13 +31,13 @@ class ScreenList extends Component {
     let eachScreen = this.props.buttons.map(this.eachScreen);
 
     return (
-      <div className="printGroup">
-        <div className="pBefore">
+      <div className="screen-list">
+        <div className="sidebyside-container">
+          <div className="img-wrapper screen-img-all"></div>
           {eachScreen}
-          <div className="print pAll"></div>
         </div>
-        <div className="pAfter">
-          <div className="print"></div>
+        <div className="sidebyside-container">
+          <div className="img-wrapper"></div>
         </div>
       </div>
     )

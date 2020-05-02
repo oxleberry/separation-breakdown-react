@@ -8,7 +8,7 @@ class InkButton extends Component {
     return (
       <button
         key={id}
-        className={`${labelColor} btn ${inkColor} ${active}`}
+        className={`btn ${labelColor} ${inkColor} ${active}`}
         id={id}
         onClick={this.props.clickHandler.bind(this, id)}>
           {name}

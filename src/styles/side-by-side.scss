@@ -1,82 +1,93 @@
-.printGroup {
-  .pAll, .aAll {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
+.screen-list {
+  // Image Variables
+  $img-all: 'http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png';
+  $img1: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png';
+  $img2: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png';
+  $img3: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png';
+  $img4: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png';
+  $img5: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png';
+  // Change the horizontal placement of image.
+  $img-position: 50%;
+  // Change the image size across different breakpoints.
+  $img-size-sm: 200px;
+  $img-size-md: 280px;
+  $img-size-lg: 350px;
+
+
+  .screen-img-all {
+    background: url($img-all);
     opacity: 1;
   }
 
-  .p1, .a1 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png);
+  .screen-img1 {
+    background: url($img1);
     opacity: 0.7;
   }
 
-  .p2, .a2 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png);
+  .screen-img2 {
+    background: url($img2);
     opacity: 1;
   }
 
-  .p3, .a3 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png);
+  .screen-img3 {
+    background: url($img3);
     opacity: 1;
   }
 
-  .p4, .a4 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png);
+  .screen-img4 {
+    background: url($img4);
     opacity: 1;
   }
 
-  .p5, .a5 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png);
+  .screen-img5 {
+    background: url($img5);
     opacity: 1;
   }
 
-  .pBefore, .pAfter {
-    position: relative;
-    width: 50%;
+  .sidebyside-container {
+    height: 180px;
     margin: 5px;
     padding: 5px;
-    height: 180px;
+    position: relative;
+    width: 50%;
 
-    @include bp(s) {
+    @include bp(md) {
       height: 200px;
     }
 
-    @include bp(m) {
+    @include bp(lg) {
       height: 400px;
     }
   }
 
-  .print {
-    left: 0%;
-    top: 0%;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: 200px;
-
-    @include bp(s) {
-      background-size: 280px;
-    }
-
-    @include bp(m) {
-      background-size: 350px;
-    }
-  }
-
-  /*ADJUSTS THE PLACEMENT*/
-  .pAll, .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12{
+  .img-wrapper{
+    background-position: $img-position;
     background-repeat: no-repeat;
-    background-position: 15%;
+    background-size: $img-size-sm;
+    height: 100%;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+
+    @include bp(md) {
+      background-size: $img-size-md;
+    }
+
+    @include bp(lg) {
+      background-size: $img-size-lg;
+    }
   }
 }
 
 .bitmapGroup {
   height: 220px;
 
-  @include bp(s) {
+  @include bp(md) {
     height: 280px;
   }
 
-  @include bp(m) {
+  @include bp(lg) {
     height: 500px;
   }
 
@@ -139,7 +150,7 @@
 }
 
 .artGroup {
-  .pAll, .aAll {
+  .screen-img-all, .aAll {
     background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
     opacity: 1;
   }
@@ -191,5 +202,42 @@
     background-repeat: no-repeat;
     background-size: 11rem;
     background-position: 50% 50%;
+  }
+}
+
+
+.screen-list,
+.bitmapGroup {
+  .slideRT {
+    animation: slideRT 1.5s ease-in-out 1 forwards;
+  }
+
+  .slideLT {
+    animation: slideLT 1.5s ease-in-out 1 forwards;
+  }
+
+  @keyframes slideRT {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(102%);
+    }
+  }
+
+  @keyframes slideLT {
+    0% {
+      transform: translateX(102%);
+    }
+
+    85% {
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(0px);
+    }
   }
 }

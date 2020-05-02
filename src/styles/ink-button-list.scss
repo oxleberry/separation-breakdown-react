@@ -1,11 +1,12 @@
-// Ink Color Variables
-$color-1: rgba(255, 255, 255, 0.7);
-$color-2: #675545;
-$color-3: #c9b280;
-$color-4: #9d3d25;
-$color-5: #ffffff;
-
 .ink-button-list {
+  // Ink Color Variables
+  $color-1: rgba(255, 255, 255, 0.7);
+  $color-2: #675545;
+  $color-3: #c9b280;
+  $color-4: #9d3d25;
+  $color-5: #ffffff;
+
+
   text-align: center;
 
   .color-1 {
@@ -41,7 +42,7 @@ $color-5: #ffffff;
     margin-bottom: 8px;
     width: 13%;
 
-    @include bp(s) {
+    @include bp(md) {
       width: 8%;   /*Divide the # of Ink Colors and adjust accoringly*/
     }
   }
@@ -66,7 +67,7 @@ $color-5: #ffffff;
     font-size: 0rem;
     font-weight: bold;
 
-    @include bp(s) {
+    @include bp(md) {
       font-size: 1.4rem;
     }
   }
@@ -77,7 +78,7 @@ $color-5: #ffffff;
     font-size: 0rem;
     font-weight: bold;
 
-    @include bp(s) {
+    @include bp(md) {
       font-size: 1.4rem;
     }
   }
@@ -88,7 +89,7 @@ $color-5: #ffffff;
     font-size: 1.4rem;
     font-weight: 200;
 
-    @include bp(s) {
+    @include bp(md) {
       font-size: 1.4rem;
       font-weight: 400;
     }

@@ -28,7 +28,7 @@ body {
 
   /*MAIN SECTIONS*/
   .inkGroup,
-  .printGroup,
+  .screen-list,
   .bitmapGroup,
   .artGroup {
     display: flex;
@@ -40,52 +40,10 @@ body {
     background-color: #232323;
   }
 
-  .printGroup {
-    border: 2px solid #474747;
-  }
-
-  .bitmapGroup {
-    border: 2px solid #474747;
-  }
-
+  .screen-list,
+  .bitmapGroup,
   .artGroup {
     border: 2px solid #474747;
-  }
-
-  .printGroup,
-  .bitmapGroup {
-    .slideRT {
-      animation: slideRT 1.5s ease-in-out 1 forwards;
-    }
-
-    .slideLT {
-      animation: slideLT 1.5s ease-in-out 1 forwards;
-    }
-
-    @keyframes slideRT {
-      0% {
-        transform: translateX(0px);
-      }
-
-      100% {
-        transform: translateX(102%);
-      }
-    }
-
-    @keyframes slideLT {
-      0% {
-        transform: translateX(102%);
-      }
-
-      85% {
-        opacity: 0.7;
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateX(0px);
-      }
-    }
   }
 
   /*FOOTER - LINKS TO OTHER EXAMPLES*/
