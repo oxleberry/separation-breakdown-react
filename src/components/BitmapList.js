@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Bitmap extends Component {
-
   render() {
     const { origOrder, screenOrder, screenAnimation } = this.props.screen;
     return (
-      <div className={`bitmap order_b${origOrder} b${screenOrder} ${screenAnimation}`}></div>
+      <div className={`img-wrapper position${origOrder} img${screenOrder} ${screenAnimation}`}></div>
     )
   }
 }
@@ -18,12 +17,6 @@ Bitmap.propTypes = {
 
 
 class BitmapList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
-
   eachScreen(screen, i) {
     return (
       <Bitmap
@@ -35,15 +28,14 @@ class BitmapList extends Component {
 
   render() {
     let eachScreen = this.props.buttons.map(this.eachScreen);
-
     return (
-      <div className="bitmapGroup">
-        <div className="bBefore">
+      <div className="bitmap-list">
+        <div className="sidebyside-container">
+          <div className="img-wrapper img-all"></div>
           {eachScreen}
-          <div className="bitmap bAll"></div>
         </div>
-        <div className="bAfter">
-          <div className="bitmap"></div>
+        <div className="sidebyside-container">
+          <div className="img-wrapper"></div>
         </div>
       </div>
     )

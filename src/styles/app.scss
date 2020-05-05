@@ -29,7 +29,7 @@ body {
   /*MAIN SECTIONS*/
   .inkGroup,
   .screen-list,
-  .bitmapGroup,
+  .bitmap-list,
   .artGroup {
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ body {
   }
 
   .screen-list,
-  .bitmapGroup,
+  .bitmap-list,
   .artGroup {
     border: 2px solid #474747;
   }

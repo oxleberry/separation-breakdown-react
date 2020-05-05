@@ -6,58 +6,59 @@
   $img3: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png';
   $img4: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png';
   $img5: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png';
-  // Change the horizontal placement of image.
+  // Change the horizontal, vertical placement of image.
   $img-position: 50%;
   // Change the image size across different breakpoints.
-  $img-size-sm: 200px;
-  $img-size-md: 280px;
-  $img-size-lg: 350px;
+  $img-size-sm: 100%;
+  $img-size-md: 100%;
+  $img-size-lg: 65%;
 
 
-  .screen-img-all {
+  height: 220px;
+
+  @include bp(md) {
+    height: 280px;
+  }
+
+  @include bp(lg) {
+    height: 500px;
+  }
+
+  .img-all {
     background: url($img-all);
     opacity: 1;
   }
 
-  .screen-img1 {
+  .img1 {
     background: url($img1);
     opacity: 0.7;
   }
 
-  .screen-img2 {
+  .img2 {
     background: url($img2);
     opacity: 1;
   }
 
-  .screen-img3 {
+  .img3 {
     background: url($img3);
     opacity: 1;
   }
 
-  .screen-img4 {
+  .img4 {
     background: url($img4);
     opacity: 1;
   }
 
-  .screen-img5 {
+  .img5 {
     background: url($img5);
     opacity: 1;
   }
 
   .sidebyside-container {
-    height: 180px;
     margin: 5px;
     padding: 5px;
     position: relative;
     width: 50%;
-
-    @include bp(md) {
-      height: 200px;
-    }
-
-    @include bp(lg) {
-      height: 400px;
-    }
   }
 
   .img-wrapper{
@@ -80,7 +81,21 @@
   }
 }
 
-.bitmapGroup {
+
+.bitmap-list {
+  // Image Variables
+  $img-all: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bitAll.png';
+  $img1: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit1.png';
+  $img2: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit2.png';
+  $img3: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit3.png';
+  $img4: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit4.png';
+  $img5: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit5.png';
+  // Change the horizontal, vertical placement of image.
+  $img-position: 72% 44%;;
+  // Change the image size across different breakpoints.
+  $img-size: 216%;
+
+
   height: 220px;
 
   @include bp(md) {
@@ -92,59 +107,51 @@
   }
 
   /*ALL*/
-  .bAll {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bitAll.png);
+  .img-all {
+    background: url($img-all);
     opacity: 1;
   }
 
-  .b1 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit1.png);
+  .img1 {
+    background: url($img1);
     opacity: 0.6;
   }
 
-  .b2 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit2.png);
+  .img2 {
+    background: url($img2);
     opacity: 1;
   }
 
-  .b3 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit3.png);
+  .img3 {
+    background: url($img3);
     opacity: 1;
   }
 
-  .b4 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit4.png);
+  .img4 {
+    background: url($img4);
     opacity: 1;
   }
 
-  .b5 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/bit5.png);
+  .img5 {
+    background: url($img5);
     opacity: 1;
   }
 
-  /*ADJUSTS THE PLACEMENT*/
-  .bAll, .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12{
-    background-size: 216%;
-    background-repeat: no-repeat;
-    background-position: 72% 44%;
-  }
-
-  .bBefore, .bAfter {
-    position: relative;
-    width: 50%;
+  .sidebyside-container {
     margin: 5px;
     padding: 5px;
+    position: relative;
+    width: 50%;
   }
 
-  .bBefore{
-    z-index: 8;
-  }
-
-  .bitmap {
-    left: 0%;
-    top: 0%;
-    position: absolute;
+  .img-wrapper {
+    background-position: $img-position;
+    background-repeat: no-repeat;
+    background-size: $img-size;
     height: 100%;
+    left: 0%;
+    position: absolute;
+    top: 0%;
     width: 100%;
   }
 }
@@ -207,7 +214,7 @@
 
 
 .screen-list,
-.bitmapGroup {
+.bitmap-list {
   .slideRT {
     animation: slideRT 1.5s ease-in-out 1 forwards;
   }

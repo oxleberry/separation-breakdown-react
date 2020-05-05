@@ -24,7 +24,6 @@ InkButton.propTypes = {
 
 
 class InkButtonList extends Component {
-
   render() {
     return (
       <div className="ink-button-list">
