@@ -2,7 +2,11 @@ body {
   background: #ddd7d2;
 }
 
+// GLOBAL APP STYLING
 .sep-breakdown-app {
+  // Shirt color var:
+  $shirt-color: black;
+  
   section {
     margin-top: 5rem;
   }
@@ -16,9 +20,8 @@ body {
   }
 
   /*CHANGE BACKGROUND TO SHIRT COLORS*/
-  .wrap, // TODO: remove after refactor
   .shirt-wrapper {
-    background: black;
+    background: $shirt-color;
     box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);
     margin-bottom: 50px;
     margin: 0px auto;
@@ -26,23 +29,9 @@ body {
     vertical-align: middle;
   }
 
-  /*MAIN SECTIONS*/
-  .inkGroup,
-  .screen-list,
-  .bitmap-list,
-  .artGroup {
-    display: flex;
-    justify-content: center;
-  }
-
-  /*CHANGE BACKGROUND TO SHIRT COLORS*/
-  .artGroup {
-    background-color: #232323;
-  }
-
-  .screen-list,
-  .bitmap-list,
-  .artGroup {
+  .print-image-list,
+  .bitmap-image-list,
+  .overview-image-list {
     border: 2px solid #474747;
   }
 

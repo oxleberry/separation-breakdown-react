@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InkButtonList from '../components/InkButtonList';
-import ScreenList from './ScreenList';
+import ScreenImageList from './ScreenImageList';
 
 class SideBySide extends Component {
   constructor(props) {
@@ -144,14 +144,14 @@ class SideBySide extends Component {
           <h2> SCREENPRINT BREAKDOWN</h2>
           <div className="shirt-wrapper">
             <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.btnClickHandler}/>
-            <ScreenList styleName="screen-list" buttons={this.state.buttons} />
+            <ScreenImageList styleName="print-image-list" buttons={this.state.buttons} />
           </div>
         </section>
         <section className="halftone-container">
           <h2> HALFTONE CLOSEUP </h2>
           <div className="shirt-wrapper">
             <InkButtonList buttons={this.state.buttons} reset={this.state.reset} clickHandler={this.btnClickHandler}/>
-            <ScreenList styleName="bitmap-list" buttons={this.state.buttons} />
+            <ScreenImageList styleName="bitmap-image-list" buttons={this.state.buttons} />
           </div>
         </section>
       </div>

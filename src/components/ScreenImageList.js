@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Screen extends Component {
+class ScreenImage extends Component {
   render() {
     const { origOrder, screenOrder, screenAnimation } = this.props.screen;
     return (
@@ -11,25 +11,25 @@ class Screen extends Component {
 }
 
 // Type Checking
-Screen.propTypes = {
+ScreenImage.propTypes = {
   screen:PropTypes.object
 }
 
 
-class ScreenList extends Component {
+class ScreenImageList extends Component {
   eachScreen(screen, i) {
     return (
-      <Screen
+      <ScreenImage
         key={i}
         screen={screen}>
-      </Screen>
+      </ScreenImage>
     )
   }
 
   render() {
     let eachScreen = this.props.buttons.map(this.eachScreen);
     return (
-      <div className="screen-list">
+      <div className={this.props.styleName}>
         <div className="sidebyside-container">
           <div className="img-wrapper img-all"></div>
           {eachScreen}
@@ -43,8 +43,8 @@ class ScreenList extends Component {
 }
 
 // // Type Checking
-ScreenList.propTypes = {
+ScreenImageList.propTypes = {
   buttons:PropTypes.array
 }
 
-export default ScreenList;
+export default ScreenImageList;

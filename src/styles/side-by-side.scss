@@ -1,4 +1,4 @@
-.screen-list {
+.print-image-list {
   // Image Variables
   $img-all: 'http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png';
   $img1: 'http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png';
@@ -14,7 +14,9 @@
   $img-size-lg: 65%;
 
 
+  display: flex;
   height: 220px;
+  justify-content: center;
 
   @include bp(md) {
     height: 280px;
@@ -82,7 +84,7 @@
 }
 
 
-.bitmap-list {
+.bitmap-image-list {
   // Image Variables
   $img-all: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bitAll.png';
   $img1: 'http://www.oxleberry.com/interactive/screenprints/teo/images/bit1.png';
@@ -96,6 +98,8 @@
   $img-size: 216%;
 
 
+  justify-content: center;
+  display: flex;
   height: 220px;
 
   @include bp(md) {
@@ -156,65 +160,8 @@
   }
 }
 
-.artGroup {
-  .screen-img-all, .aAll {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/pAll.png);
-    opacity: 1;
-  }
-
-  .p1, .a1 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p1.png);
-    opacity: 0.7;
-  }
-
-  .p2, .a2 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p2.png);
-    opacity: 1;
-  }
-
-  .p3, .a3 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p3.png);
-    opacity: 1;
-  }
-
-  .p4, .a4 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p4.png);
-    opacity: 1;
-  }
-
-  .p5, .a5 {
-    background: url(http://www.oxleberry.com/interactive/screenprints/teo/images/p5.png);
-    opacity: 1;
-  }
-
-  .aBefore, .aAfter {
-    position: relative;
-    height: 140px;
-    width: 100%;
-    margin: 3px;
-    background-color: black;
-  }
-
-  .all{
-    left: 0%;
-    top: 0%;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: 180px;
-  }
-
-  /*ADJUSTS THE PLACEMENT*/
-  .aAll, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12{
-    background-repeat: no-repeat;
-    background-size: 11rem;
-    background-position: 50% 50%;
-  }
-}
-
-
-.screen-list,
-.bitmap-list {
+.print-image-list,
+.bitmap-image-list {
   .slideRT {
     animation: slideRT 1.5s ease-in-out 1 forwards;
   }
