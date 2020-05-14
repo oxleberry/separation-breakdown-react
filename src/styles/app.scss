@@ -4,9 +4,9 @@ body {
 
 // GLOBAL APP STYLING
 .sep-breakdown-app {
-  // Shirt color var:
+  // Shirt Color Variables
   $shirt-color: black;
-  
+
   section {
     margin-top: 5rem;
   }
@@ -19,7 +19,6 @@ body {
     text-align: center;
   }
 
-  /*CHANGE BACKGROUND TO SHIRT COLORS*/
   .shirt-wrapper {
     background: $shirt-color;
     box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.3);

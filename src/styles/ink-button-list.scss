@@ -5,6 +5,9 @@
   $color-3: #c9b280;
   $color-4: #9d3d25;
   $color-5: #ffffff;
+  // Width of Button Variables
+  $btn-width-sm: 10%;
+  $btn-width-md: 10%;
 
 
   text-align: center;
@@ -42,10 +45,10 @@
     display: inline-block;
     height: 40px;
     margin-bottom: 8px;
-    width: 13%;
+    width: $btn-width-sm;
 
     @include bp(md) {
-      width: 10%;   /*Divide the # of Ink Colors and adjust accoringly*/
+      width: $btn-width-md;
     }
   }
 
