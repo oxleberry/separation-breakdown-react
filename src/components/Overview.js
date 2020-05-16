@@ -2,28 +2,32 @@ import React, { Component } from 'react';
 
 class Overview extends Component {
 
+  displyOverviewData = (type) => {
+    let output = [];
+    // Display all but the Reset button data
+    for (var i = 0; i < this.props.buttons.length - 1; i++) {
+      const data = this.props.buttons[i];
+      if (type === 'label') {
+        output.push(<div key={i} className={`overview-btn ${data.labelColor} ${data.inkColor}`}>{data.name}</div>);
+      } else if (type === 'image') {
+        output.push(<div key={i} className="img-container"><div className={`img-wrapper img${data.id}`}></div></div>);
+      }
+    }
+    return output
+  }
+
   render() {
     return (
       <section className="overview">
         <h2>OVERVIEW</h2>
         <div className="shirt-wrapper">
           <div className="ink-button-list">
-              {/* TODO: move state into App.js to pull ink names dymanically
-              // (this.state.buttons[0].name) */}
-              <button className="darkText overview-btn color-5">all</button>
-              <button className="darkText overview-btn color-1">ub</button>
-              <button className="darkText overview-btn color-2">7532</button>
-              <button className="darkText overview-btn color-3">468</button>
-              <button className="darkText overview-btn color-4">174</button>
-              <button className="darkText overview-btn color-5">wht</button>
+            <div className="darkText overview-btn color-5">all</div>
+            {this.displyOverviewData('label')}
           </div>
           <div className="overview-image-list">
             <div className="img-container"><div className="img-wrapper img-all"></div></div>
-            <div className="img-container"><div className="img-wrapper img1"></div></div>
-            <div className="img-container"><div className="img-wrapper img2"></div></div>
-            <div className="img-container"><div className="img-wrapper img3"></div></div>
-            <div className="img-container"><div className="img-wrapper img4"></div></div>
-            <div className="img-container"><div className="img-wrapper img5"></div></div>
+            {this.displyOverviewData('image')}
           </div>
         </div>
       </section>

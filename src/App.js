@@ -166,7 +166,7 @@ class App extends Component {
           buttons={this.state.buttons}
           reset={this.state.reset}
           clickHandler={this.btnClickHandler} />
-        <Overview />
+        <Overview buttons={this.state.buttons} />
       </div>
     )
   }
