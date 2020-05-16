@@ -22,7 +22,7 @@ class Overview extends Component {
         <h2>OVERVIEW</h2>
         <div className="shirt-wrapper">
           <div className="ink-button-list">
-            <div className="darkText overview-btn color-5">all</div>
+            <div className="darkText overview-btn white">all</div>
             {this.displyOverviewData('label')}
           </div>
           <div className="overview-image-list">
