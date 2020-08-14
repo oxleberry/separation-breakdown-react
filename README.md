@@ -1,11 +1,11 @@
-### Preview page
+### Separation Breakdown Preview Page
 [http://www.oxleberry.com/interactive/screenprints](http://www.oxleberry.com/interactive/screenprints/hrb/sp0.html)
 
-### Page description
+### Page Description
 
 Separation Breakdown is a page that visualizes the color separation process for a screen printed design. Click on each color to examine what each plate will look like. Also, the order in which the buttons are pressed will determine the print order displayed on the right hand side. This site is based on an actual screen-printed color separations.
 
-### Dev description
+### Dev Description
 
 This page has been refactored using React. <br />
 Original version used jQuery to handle button interactions. <br />
