@@ -1,5 +1,5 @@
 ### Separation Breakdown Preview Page
-[http://www.oxleberry.com/interactive/screenprints](http://www.oxleberry.com/interactive/screenprints/hrb/sp0.html)
+[http://www.oxleberry.com/creative-coding/hrb-screenprint/hrb-screenprint.html](http://www.oxleberry.com/creative-coding/hrb-screenprint/hrb-screenprint.html)
 
 ### Page Description
 
